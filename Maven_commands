@@ -30,7 +30,7 @@ Place the main class in the below <mainClass> tag
                     <manifest>
 
                     <!-- give full qualified name of your main class-->
-                      <mainClass>com.qshore.test1.App</mainClass>
+                      <mainClass>com.qshore.test1.App.java</mainClass>
 
                     </manifest>
                   </archive>
