@@ -1,0 +1,65 @@
+Maven2 Reference:
+
+Invoking Maven
+General Syntax:
+mvn plugin:target [-Doption1 -Doption2 dots]
+mvn help
+mvn -X ...
+Prints help debugging output, very useful to diagnose
+
+Creating a new Project (jar)
+mvn archetype:generate -DgroupId=Artifact Group -DartifactId=Artifact ID
+
+Example:
+
+Eg1: mvn archetype:generate -DgroupId=com.qshore.test1 -DartifactId=elements12
+
+Eg2: mvn archetype:generate -DgroupId=de.focusdv.bcs -DartifactId=new-app
+Creates a new Project Directory new-app with package structure de.focusdv.bcs.
+Name of the packaged jar will be new-app-version.jar
+
+
+Running a jar file 
+Place the main class in the below <mainClass> tag
+
+<plugin>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.0.2</version>
+                <configuration>
+                  <archive>
+                    <manifest>
+
+                    <!-- give full qualified name of your main class-->
+                      <mainClass>com.qshore.test1.App</mainClass>
+
+                    </manifest>
+                  </archive>
+                </configuration>
+        </plugin>
+Command : java -jar <createdjar>.jar
+
+Creating a new Project (war)
+
+mvn archetype:generate -DgroupId=Artifact Group -DartifactId=Artifact ID -DarchetypeArtifactId=maven-archetype-webapp
+Eg1: 
+mvn archetype:generate -DgroupId=com.qshore.web -DartifactId=webapp -DarchetypeArtifactId=maven-archetype-webapp
+
+
+
+Eg2::
+mvn archetype:generate  -DgroupId=com.qshore.website -DartifactId=new-webapp -DarchetypeArtifactId=maven-archetype-webapp
+Creates a new Directory new-webapp with package structure de.focusdv.bcs.
+Name of the packaged war will be new-app-version.war
+
+Standard Project Structure directory description
+
+/new-app/pom.xml maven2 project file
+/new-app/src/ Sources
+/new-app/src/main/java/ Java source tree
+/new-app/src/test/java/ Java unit tests
+/new-app/src/main/resources/ Java classpath resources
+/new-app/src/test/resources/ Resources for unit-tests
+/new-app/target/classes/ compiles classes
+/new-app/target/test-classes/ compiles test classes
+/new-app/target/dots other plugins' output
+/newwebapp/src/main/webapp
