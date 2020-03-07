@@ -1,7 +1,7 @@
 #Maven Installation#
 
 Install Java 
-yum install java-1.8.0-jdk-devel -y
+yum install java-1.8.0-openjdk-devel -y
 
 cd /opt/
 /opt>sudo su –
