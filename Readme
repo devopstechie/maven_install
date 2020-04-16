@@ -4,7 +4,6 @@ Install Java
 yum install java-1.8.0-openjdk-devel -y
 
 cd /opt/
-/opt>sudo su –
     
 /opt>wget http://apachemirror.wuchna.com/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
 
