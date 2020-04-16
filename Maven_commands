@@ -12,9 +12,11 @@ mvn archetype:generate -DgroupId=Artifact Group -DartifactId=Artifact ID
 
 Example:
 
-Eg1: mvn archetype:generate -DgroupId=com.qshore.test1 -DartifactId=elements12
+Eg1: 
+mvn archetype:generate -DgroupId=com.develop.test1 -DartifactId=elements12
 
-Eg2: mvn archetype:generate -DgroupId=de.focusdv.bcs -DartifactId=new-app
+Eg2: 
+mvn archetype:generate -DgroupId=de.focusdv.bcs -DartifactId=new-app
 Creates a new Project Directory new-app with package structure de.focusdv.bcs.
 Name of the packaged jar will be new-app-version.jar
 
@@ -47,7 +49,7 @@ mvn archetype:generate -DgroupId=com.qshore.web -DartifactId=webapp -DarchetypeA
 
 
 Eg2::
-mvn archetype:generate  -DgroupId=com.qshore.website -DartifactId=new-webapp -DarchetypeArtifactId=maven-archetype-webapp
+mvn archetype:generate  -DgroupId=com.develop.website -DartifactId=new-webapp -DarchetypeArtifactId=maven-archetype-webapp
 Creates a new Directory new-webapp with package structure de.focusdv.bcs.
 Name of the packaged war will be new-app-version.war
 
